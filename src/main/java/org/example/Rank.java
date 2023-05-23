@@ -13,4 +13,11 @@ public enum Rank {
     JACK,
     QUEEN,
     KING;
+
+    public int getValue() {
+        return switch (this) {
+            case JACK, QUEEN, KING -> 10;
+            default -> ordinal() + 1;
+        };
+    }
 }
